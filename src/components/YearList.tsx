@@ -119,7 +119,7 @@ export default function TemperatureDashboard() {
                 <div className="mb-6 text-center">
                     <div className="flex items-center justify-center gap-2 mb-4">
                         <img src="/daisy-logo.png" className="w-8 h-8" />
-                        <span className="text-sm font-medium text-slate-500 tracking-widest uppercase">daisy</span>
+                        <span className="text-sm font-medium text-slate-500 tracking-widest">mydaisy</span>
                     </div>
                     <button
                         onClick={() => setShowSearch(s => !s)}
@@ -131,7 +131,7 @@ export default function TemperatureDashboard() {
                             <circle cx="12" cy="10" r="2.5" />
                         </svg>
                     </button>
-                    <p className="text-xs text-slate-600 mt-2 tracking-widest uppercase">This day in history</p>
+                    <p className="text-xs text-slate-600 mt-2 tracking-widest uppercase">Vädret nu och då</p>
                 </div>
 
                 {showSearch && (
