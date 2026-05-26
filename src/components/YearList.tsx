@@ -244,16 +244,16 @@ export default function TemperatureDashboard() {
                             <p className="text-lg font-medium text-white tracking-wide mb-3 capitalize text-center">{dateLabel}</p>
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-xs text-blue-200 uppercase tracking-widest mb-1">
+                                    <p className="text-xs text-blue-200 mb-1">
                                         {isToday ? "Nu" : isFuture ? "Min prognos" : "Min"}
                                     </p>
-                                    <p className="text-4xl font-light text-white">
+                                    <p className="text-2xl font-medium text-white">
                                         {data.today.current != null ? `${data.today.current.toFixed(1)}°` : "N/A"}
                                     </p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-xs text-blue-200 mb-1">Nederbörd</p>
-                                    <p className="text-xl font-medium text-white">
+                                    <p className="text-2xl font-medium text-white">
                                         {data.today.rain ? `${data.today.rain.toFixed(1)}mm` : "—"}
                                     </p>
                                 </div>
@@ -261,7 +261,7 @@ export default function TemperatureDashboard() {
                                     <p className="text-xs text-blue-200 mb-1">
                                         {isToday ? "Max idag" : isFuture ? "Max prognos" : "Max"}
                                     </p>
-                                    <p className="text-xl font-medium text-white">
+                                    <p className="text-2xl font-medium text-white">
                                         {data.today.max != null ? `${data.today.max.toFixed(1)}°C` : "N/A"}
                                     </p>
                                 </div>
