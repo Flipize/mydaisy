@@ -222,6 +222,11 @@ export default function TemperatureDashboard() {
                                 </div>
                             </div>
                         </div>
+                        <div className="px-5 py-2 border-b border-slate-700">
+                            <p className="text-xs text-slate-500 uppercase tracking-widest">
+                                {new Date(selectedDate + "T12:00:00").toLocaleDateString("sv-SE", { month: "long", day: "numeric" })} — tidigare år
+                            </p>
+                        </div>
                         <div className="divide-y divide-slate-700">
                             {Array.from({ length: 10 }).map((_, i) => (
                                 <div key={i} className="flex items-center justify-between px-5 py-3">
@@ -242,8 +247,8 @@ export default function TemperatureDashboard() {
                     <div className="rounded-2xl overflow-hidden border border-slate-700 bg-slate-800 shadow-sm">
                         <div className="px-5 py-4 bg-gradient-to-r from-blue-700 to-blue-600">
                             <p className="text-lg font-medium text-white tracking-wide mb-3 capitalize text-center">{dateLabel}</p>
-                            <div className="flex items-center justify-between">
-                                <div>
+                            <div className="flex items-center">
+                                <div className="flex-1">
                                     <p className="text-xs text-blue-200 mb-1">
                                         {isToday ? "Nu" : isFuture ? "Min prognos" : "Min"}
                                     </p>
@@ -251,13 +256,13 @@ export default function TemperatureDashboard() {
                                         {data.today.current != null ? `${data.today.current.toFixed(1)}°` : "N/A"}
                                     </p>
                                 </div>
-                                <div className="text-center">
+                                <div className="text-center flex-1">
                                     <p className="text-xs text-blue-200 mb-1">Nederbörd</p>
                                     <p className="text-2xl font-medium text-white">
                                         {data.today.rain ? `${data.today.rain.toFixed(1)}mm` : "—"}
                                     </p>
                                 </div>
-                                <div className="text-right">
+                                <div className="text-right flex-1">
                                     <p className="text-xs text-blue-200 mb-1">
                                         {isToday ? "Max idag" : isFuture ? "Max prognos" : "Max"}
                                     </p>
@@ -266,6 +271,11 @@ export default function TemperatureDashboard() {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                        <div className="px-5 py-2 border-b border-slate-700">
+                            <p className="text-xs text-slate-500 uppercase tracking-widest">
+                                {new Date(selectedDate + "T12:00:00").toLocaleDateString("sv-SE", { month: "long", day: "numeric" })} — tidigare år
+                            </p>
                         </div>
                         <div className="divide-y divide-slate-700">
                             {data.history.map((item: any) => (
